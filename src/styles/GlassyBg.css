@@ -1,0 +1,45 @@
+/* GlassyBg.css: light background with glassmorphism effect */
+
+.glassy-bg {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #f0f2f5;
+}
+
+.dashboard-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.18);
+  margin: 32px auto;
+  padding: 32px;
+  max-width: 900px;
+  transition: background 0.5s, box-shadow 0.5s;
+}
+
+.admin-panel-container, .login-container {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+/* Responsive and smooth animation for glassy effect */
+@media (max-width: 600px) {
+  .dashboard-container {
+    padding: 16px;
+    max-width: 98vw;
+    border-radius: 12px;
+  }
+}
